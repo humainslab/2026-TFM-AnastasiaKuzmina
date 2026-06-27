@@ -49,4 +49,5 @@ Se realiza un experimento para medir el efecto de inyectar metadatos estructurad
 Cada configuración se lanza sobre 60 preguntas * 10 iteraciones con RAGAS. La configuración META-B obtiene un Faithfulness ligeramente superior al baseline (0.372 frente a ~0.36), pero empeora en ContextPrecision (0.766 frente a ~0.85) y en ResponseRelevancy (0.589 frente a ~0.62). 
 
 **Estadística**
+
 Se analizan analizan los 12 archivos de resultados RAGAS. El script agrega cada pregunta por la mediana de sus 10 iteraciones (60 observaciones pareadas por configuracion), verifica la no normalidad con Shapiro-Wilk, aplica Friedman por grupo y Wilcoxon signed-rank por pares con correccion de Holm dentro de cada grupo. El tamaño del efecto se mide con rank-biserial r. El fichero de salida es analisis_estadistico.xlsx con 5 hojas: Descriptivas, Normalidad, Friedman, Wilcoxon vs Baseline y Wilcoxon Intragrupo.
